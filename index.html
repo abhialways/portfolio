@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chambrolu Venkata Abhishek - Web Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            position: relative;
+            background: transparent !important;
+        }
+        
+        #video-bg {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100vw;
+            min-height: 100vh;
+            width: auto;
+            height: auto;
+            z-index: -1;
+            object-fit: cover;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.85); /* Increased opacity for better readability */
+            z-index: -1;
+        }
+
+        .main-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .modern-section, .modern-card {
+            background: rgba(0, 0, 0, 0.92); /* More opaque for better contrast */
+            backdrop-filter: blur(10px);
+        }
+
+        .hero.modern-dark-hero {
+            background: none !important;
+            box-shadow: none !important;
+        }
+
+        .modern-hero-title, .modern-hero-role, .modern-hero-desc {
+            color: #fff !important;
+            text-shadow: 0 4px 16px #000, 0 0 16px #a259ff, 0 0 32px #fff;
+        }
+
+        .modern-hero-title {
+            font-size: 3.5rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+            color: #fff !important;
+            text-shadow:
+                0 0 12px #a259ff,
+                0 0 32px #fff,
+                0 4px 32px #000,
+                0 2px 8px #000,
+                0 0 40px #a259ff,
+                0 0 80px #fff;
+            padding: 0.5rem 1.5rem;
+            border-radius: 18px;
+            background: rgba(30, 0, 60, 0.25);
+            display: inline-block;
+        }
+
+        .modern-hero-role {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .modern-hero-desc {
+            font-size: 1.1rem;
+            font-weight: 400;
+        }
+
+        .accent {
+            color: #a259ff !important;
+            text-shadow: 0 0 8px #fff, 0 0 16px #a259ff;
+        }
+
+        .about-text, .about-info, .modern-card-content, .section-title, .timeline-date, .project-links, .info-title, .cert-date {
+            color: #fff !important;
+            text-shadow: 0 2px 8px #000, 0 0 8px #a259ff, 0 0 16px #000;
+        }
+
+        .info-title {
+            color: #111 !important;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <!-- Video Background -->
+    <video id="video-bg" autoplay muted loop playsinline>
+        <source src="assets/videos/3d-background.mp4.mp4" type="video/mp4">
+    </video>
+    <div class="overlay"></div>
+    <div class="main-content">
+    <!-- Navigation -->
+    <nav class="navbar modern-navbar">
+        <div class="container modern-navbar-container">
+            <a href="#" class="modern-logo">CH.V.ABHISHEK</a>
+            <ul class="modern-nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="assets/resume.pdf" target="_blank" style="font-weight:600; color:#a259ff;"><i class="fas fa-download" style="margin-right:6px;"></i>Resume</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero modern-dark-hero">
+        <div class="modern-hero-bg-glow"></div>
+        <div class="container modern-hero-container">
+            <div class="modern-profile-img-wrapper">
+                <img src="assets/images/profile.jpg" alt="Chambrolu Venkata Abhishek" class="modern-profile-img">
+            </div>
+            <div class="modern-hero-content">
+                <h1 class="modern-hero-title" style="background:none;padding:0;border-radius:0;text-shadow:none;color:#fff;font-size:3rem;font-weight:800;">Hi, I'm <span class="accent" style="color:#a259ff;text-shadow:none;">Chambrolu Venkata Abhishek</span></h1>
+                <h2 class="modern-hero-role">Full Stack Developer & AI Specialist</h2>
+                <p class="modern-hero-desc">I build robust, scalable, and delightful digital products at the intersection of <span style="color:#a259ff; text-shadow:none;">Data Science</span> and <span style="color:#a259ff; text-shadow:none;">Flutter</span>.<br>Let's create something amazing together!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text animate">
+                    <p>Multifaceted and future-focused AI and Full-Stack Developer with a strong foundation in artificial intelligence and machine learning. Specializing in model development, optimization, and deployment, I possess deep expertise in data preprocessing, feature engineering, and building predictive systems using TensorFlow, PyTorch, and Scikit-learn.</p>
+                    <p>Equally adept in crafting visually stunning and high-performing mobile apps using Flutter, I combine technical proficiency with user-centric UI/UX design skills. My full-stack experience spans from backend logic to front-end interactivity, integrating seamlessly with modern frameworks and tools such as Python, Node.js, MongoDB, and MySQL.</p>
+                    <p>With hands-on experience in real-world AI applications and a keen eye for data visualization using tools like Pandas, Matplotlib, Seaborn, and Power BI, I thrive at the intersection of innovation and impact—transforming complex problems into scalable digital solutions.</p>
+                </div>
+                <div class="about-info animate">
+                    <div class="info-item">
+                        <span class="info-title">Name:</span>
+                        <span>CHAMBROLU VENKATA ABHISHEK</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-title">Email:</span>
+                        <span><a href="mailto:abhiprofessional2005@gmail.com">abhiprofessional2005@gmail.com</a></span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-title">Phone:</span>
+                        <span>7093185747</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-title">Location:</span>
+                        <span>Vizianagaram, Andhra Pradesh, India</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-title">Availability:</span>
+                        <span>Open to Remote</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-title">Languages:</span>
+                        <span>Hindi, Telugu, English</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience modern-section">
+        <div class="container">
+            <h2 class="section-title modern-section-title">Work Experience</h2>
+            <div class="modern-cards-grid">
+                <div class="modern-card animate">
+                    <div class="modern-card-icon"><i class="fas fa-laptop-code"></i></div>
+                    <div class="modern-card-content">
+                        <h3>Full Stack Developer</h3>
+                        <h4><img src="assets/images/1643170778604.jpeg" alt="Gram Tarang Logo" style="height: 32px; vertical-align: middle; margin-right: 8px; border-radius: 4px;">Gram Tarang Inclusive Development Services (GTIDS)</h4>
+                        <p class="timeline-date">November 2024 - Present</p>
+                        <p>Spearheaded the development and maintenance of multiple web applications using PHP Laravel for front-end workflows and Spring Boot for robust back-end services within 3-tier architecture frameworks. These solutions spanned sectors such as healthcare, education, and financial services, each crafted with a user-centric vision to ensure functional elegance and reliability.</p>
+                        <p>Collaborated closely with cross-functional teams to architect intuitive interfaces, implement secure authentication protocols, and introduce features such as offline accessibility, enhancing usability even in resource-constrained environments. Further extended design versatility by employing WordPress and Elementor for developing streamlined, single-tier websites that prioritize accessibility and dynamic user engagement.</p>
+                    </div>
+                </div>
+                <div class="modern-card animate">
+                    <div class="modern-card-icon"><img src="assets/images/azista_bst_aerospace_logo.jpeg" alt="Azista BST Aerospace Logo" style="height: 32px; vertical-align: middle; border-radius: 4px;"></div>
+                    <div class="modern-card-content">
+                        <h3>Web Developer</h3>
+                        <h4>Azista BST Aerospace</h4>
+                        <p class="timeline-date">June 2023 - August 2023, Hyderabad</p>
+                        <ul>
+                            <li>Developed and maintained web applications, improving user experience and functionality.</li>
+                            <li>Collaborated with cross-functional teams to implement responsive designs and enhance site performance.</li>
+                            <li>Assisted in debugging and optimizing code, ensuring robust and scalable solutions for aerospace projects.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education modern-section">
+        <div class="container">
+            <h2 class="section-title modern-section-title">Education</h2>
+            <div class="modern-cards-grid">
+                <div class="modern-card animate">
+                    <div class="modern-card-icon"><img src="assets/images/Centurion_University_of_Technology_and_Management_Logo.svg.png" alt="Centurion University Logo" style="height: 32px; vertical-align: middle; border-radius: 4px;"></div>
+                    <div class="modern-card-content">
+                        <h3>B.Tech in Computer Science and Engineering (CSE)</h3>
+                        <h4>Centurion University of Technology and Management (CUTM)</h4>
+                        <p class="timeline-date">August 2022 - Present</p>
+                        <p>Specialization: Artificial Intelligence and Machine Learning (DATA SCIENCE)</p>
+                        <p>GPA: 8.7</p>
+                    </div>
+                </div>
+                <div class="modern-card animate">
+                    <div class="modern-card-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="modern-card-content">
+                        <h3>Higher Secondary Certificate in Science</h3>
+                        <h4>Best Junior College</h4>
+                        <p class="timeline-date">June 2020 - March 2022</p>
+                        <p>Physics, Chemistry, Mathematics</p>
+                        <p>GPA: 9.3</p>
+                    </div>
+                </div>
+                <div class="modern-card animate">
+                    <div class="modern-card-icon"><i class="fas fa-school"></i></div>
+                    <div class="modern-card-content">
+                        <h3>Secondary School Certificate in General Studies</h3>
+                        <h4>Sri Chaithanya Techno School</h4>
+                        <p class="timeline-date">June 2019 - April 2020</p>
+                        <p>GPA: 10.0</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects modern-section">
+        <div class="container">
+            <h2 class="section-title modern-section-title">Projects</h2>
+            <div class="modern-cards-grid">
+                <div class="modern-card animate">
+                    <div class="modern-card-img"><img src="assets/images/images.png" alt="Health Care on Wheels"></div>
+                    <div class="modern-card-content">
+                        <h3>Health Care on Wheels</h3>
+                        <p>A mobile healthcare solution developed for Gram Tarang Inclusive Development Services.</p>
+                        <div class="project-links">
+                            <a href="https://healthcare.cutmap.ac.in/" target="_blank" class="btn primary-btn">Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="modern-card animate">
+                    <div class="modern-card-img"><img src="assets/images/Screenshot 2025-05-16 203427.png" alt="NSDC Portal"></div>
+                    <div class="modern-card-content">
+                        <h3>NSDC Portal</h3>
+                        <p>A comprehensive portal for National Skill Development Corporation developed at GTIDS.</p>
+                        <div class="project-links">
+                            <a href="https://nsdc.gramtarang.org/" target="_blank" class="btn primary-btn">Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="modern-card animate">
+                    <div class="modern-card-img"><img src="assets/images/Screenshot 2025-05-16 204154.png" alt="Courseware Platform"></div>
+                    <div class="modern-card-content">
+                        <h3>Courseware Platform</h3>
+                        <p>An educational platform for course management and delivery.</p>
+                        <div class="project-links">
+                            <a href="https://courseware.cutmap.ac.in/" target="_blank" class="btn primary-btn">Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="modern-card animate">
+                    <div class="modern-card-img"><img src="assets/images/dhanamonline-english_2025-01-24_mp2e7yc4_Dhanam-Fall-back.avif" alt="Dhanam App Gateway"></div>
+                    <div class="modern-card-content">
+                        <h3>Dhanam App Gateway</h3>
+                        <p>A financial services gateway application developed at GTIDS.</p>
+                        <div class="project-links">
+                            <a href="https://gateway.dhanam.app/login" target="_blank" class="btn primary-btn">Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="modern-card animate">
+                    <div class="modern-card-img"><img src="assets/images/Screenshot 2025-05-16 204027.png" alt="Offline App"></div>
+                    <div class="modern-card-content">
+                        <h3>Offline App</h3>
+                        <p>An application designed to work in offline environments with data synchronization capabilities.</p>
+                        <div class="project-links">
+                            <a href="https://offlineapp.gtibs.com/" target="_blank" class="btn primary-btn">Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="modern-card animate">
+                    <div class="modern-card-img"><img src="assets/images/Screenshot 2025-05-16 204527.png" alt="CPS Parala Website"></div>
+                    <div class="modern-card-content">
+                        <h3>CPS Parala Website</h3>
+                        <p>A website for CPS Parala currently under development.</p>
+                        <div class="project-links">
+                            <a href="https://cpsparala.ac.in/" target="_blank" class="btn primary-btn">Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills modern-section">
+        <div class="container">
+            <h2 class="section-title modern-section-title">Skills</h2>
+            <div class="modern-cards-grid">
+                <div class="modern-card animate">
+                    <div class="modern-card-icon"><i class="fas fa-code"></i></div>
+                    <div class="modern-card-content">
+                        <h3>Programming</h3>
+                        <ul>
+                            <li>Python (90%)</li>
+                            <li>JavaScript (95%)</li>
+                            <li>Java (95%)</li>
+                            <li>SQL (80%)</li>
+                            <li>Node.js (75%)</li>
+                            <li>Flutter (70%)</li>
+                            <li>PHP (90%)</li>
+                            <li>MongoDB (90%)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modern-card animate">
+                    <div class="modern-card-icon"><i class="fas fa-globe"></i></div>
+                    <div class="modern-card-content">
+                        <h3>Web Development</h3>
+                        <ul>
+                            <li>PHP Laravel (85%)</li>
+                            <li>Spring Boot (80%)</li>
+                            <li>WordPress (90%)</li>
+                            <li>HTML (95%)</li>
+                            <li>CSS (90%)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modern-card animate">
+                    <div class="modern-card-icon"><i class="fas fa-robot"></i></div>
+                    <div class="modern-card-content">
+                        <h3>AI/ML</h3>
+                        <ul>
+                            <li>Machine Learning (85%)</li>
+                            <li>Data Visualization (80%)</li>
+                            <li>Statistical Analysis (75%)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modern-card animate">
+                    <div class="modern-card-icon"><i class="fas fa-database"></i></div>
+                    <div class="modern-card-content">
+                        <h3>Data Science</h3>
+                        <ul>
+                            <li>Data Analysis (90%)</li>
+                            <li>Pandas (90%)</li>
+                            <li>NumPy (85%)</li>
+                            <li>Matplotlib (85%)</li>
+                            <li>Seaborn (80%)</li>
+                            <li>Power BI (75%)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications modern-section">
+        <div class="container">
+            <h2 class="section-title modern-section-title">Certifications</h2>
+            <div class="modern-cards-grid">
+                <div class="modern-card animate">
+                    <div class="modern-card-icon"><i class="fas fa-certificate"></i></div>
+                    <div class="modern-card-content">
+                        <h3>PACK HACK</h3>
+                        <p>Presidency University</p>
+                        <p class="cert-date">September 2024</p>
+                    </div>
+                </div>
+                <div class="modern-card animate">
+                    <div class="modern-card-icon"><i class="fas fa-certificate"></i></div>
+                    <div class="modern-card-content">
+                        <h3>IEEE RAPID INNOVATION</h3>
+                        <p>CMR Institute of Technology</p>
+                        <p class="cert-date">October 2024</p>
+                    </div>
+                </div>
+                <div class="modern-card animate">
+                    <div class="modern-card-icon"><i class="fas fa-certificate"></i></div>
+                    <div class="modern-card-content">
+                        <h3>BLOCK CHAIN TECHNOLOGY</h3>
+                        <p class="cert-date">2024</p>
+                    </div>
+                </div>
+                <div class="modern-card animate">
+                    <div class="modern-card-icon"><i class="fas fa-certificate"></i></div>
+                    <div class="modern-card-content">
+                        <h3>Andhra Tech League Winner</h3>
+                        <p class="cert-date">2024</p>
+                    </div>
+                </div>
+                <div class="modern-card animate">
+                    <div class="modern-card-icon"><i class="fas fa-certificate"></i></div>
+                    <div class="modern-card-content">
+                        <h3>Bharat Tech League Winner</h3>
+                        <p class="cert-date">2024</p>
+                    </div>
+                </div>
+                <div class="modern-card animate">
+                    <div class="modern-card-icon"><img src="assets/images/Screenshot 2025-05-17 000555.png" alt="Full Stack Intern Certificate" style="height: 32px; vertical-align: middle; border-radius: 4px;"></div>
+                    <div class="modern-card-content">
+                        <h3>Full Stack Intern</h3>
+                        <button class="btn primary-btn" type="button" onclick="showCertImage('assets/images/Screenshot 2025-05-17 000555.png')">View Certificate</button>
+                    </div>
+                </div>
+                <div class="modern-card animate">
+                    <div class="modern-card-icon"><i class="fas fa-certificate"></i></div>
+                    <div class="modern-card-content">
+                        <h3>Codec Technologies</h3>
+                        <button class="btn primary-btn" type="button" onclick="showCertImage('assets/images/Screenshot 2025-05-16 205100.png')">View Certificate</button>
+                    </div>
+                </div>
+                <div class="modern-card animate">
+                    <div class="modern-card-icon"><i class="fas fa-certificate"></i></div>
+                    <div class="modern-card-content">
+                        <h3>BLACK BOX AI</h3>
+                        <button class="btn primary-btn" type="button" onclick="showCertImage('assets/images/Screenshot 2025-05-16 204758.png')">View Certificate</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact modern-section">
+        <div class="container">
+            <h2 class="section-title modern-section-title">Contact Me</h2>
+            <div class="modern-cards-grid">
+                <div class="modern-card animate" style="max-width: 500px; margin: 0 auto;">
+                    <div class="modern-card-content">
+                        <form action="https://formspree.io/f/mzzrorqe" method="POST" class="modern-contact-form">
+                            <label style="display:block; margin-bottom:1rem; color:#fff;">
+                                Your email:
+                                <input type="email" name="email" required style="width:100%;padding:10px;margin-top:6px;border-radius:8px;border:none;outline:none;box-shadow:0 2px 8px #a259ff22;">
+                            </label>
+                            <label style="display:block; margin-bottom:1rem; color:#fff;">
+                                Your message:
+                                <textarea name="message" required style="width:100%;padding:10px;margin-top:6px;border-radius:8px;border:none;outline:none;box-shadow:0 2px 8px #a259ff22;min-height:120px;"></textarea>
+                            </label>
+                            <button type="submit" class="btn primary-btn" style="width:100%;">Send</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reach Out to Me Section -->
+    <section class="reach-out" style="text-align:center; margin-top: -2rem; margin-bottom: 2rem;">
+        <h2 style="color:#fff; font-size:2rem; margin-bottom:1rem;">Reach Out to Me</h2>
+        <a href="https://www.linkedin.com/in/chambrolu-venkata-abhishek-474460301/" target="_blank" style="display:inline-block; text-decoration:none; margin-right: 1.5rem;">
+            <i class="fab fa-linkedin" style="font-size:2.5rem; color:#0a66c2; background:#fff; border-radius:50%; padding:0.5rem 0.6rem; box-shadow:0 2px 8px #0003; transition:box-shadow 0.2s;"></i>
+        </a>
+        <a href="#" onclick="showWhatsappQR(); return false;" style="display:inline-block; text-decoration:none; margin-right: 1.5rem;">
+            <i class="fab fa-whatsapp" style="font-size:2.5rem; color:#25d366; background:#fff; border-radius:50%; padding:0.5rem 0.6rem; box-shadow:0 2px 8px #0003; transition:box-shadow 0.2s;"></i>
+        </a>
+        <a href="https://www.instagram.com/abhix_says_?igsh=cjFudm9iNDEwOG9p&utm_source=qr" target="_blank" style="display:inline-block; text-decoration:none;">
+            <i class="fab fa-instagram" style="font-size:2.5rem; color:#E1306C; background:#fff; border-radius:50%; padding:0.5rem 0.6rem; box-shadow:0 2px 8px #0003; transition:box-shadow 0.2s;"></i>
+        </a>
+    </section>
+
+    <!-- WhatsApp QR Modal -->
+    <div id="whatsappQRModal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:99999;">
+        <span onclick="closeWhatsappQR()" style="position:absolute; top:30px; right:50px; color:#fff; font-size:2rem; cursor:pointer;">&times;</span>
+        <img src="assets/images/whatsapp-qr.png" alt="WhatsApp QR Code" style="max-width:90vw; max-height:80vh; border-radius:10px; box-shadow:0 0 20px #000; background:#fff; padding:1rem;">
+        <p style="color:#fff; text-align:center; margin-top:1rem; font-size:1.2rem;">Scan to chat with me on WhatsApp!</p>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Chambrolu Venkata Abhishek</h3>
+                    <p>Full Stack Developer</p>
+                    <p>
+                        <a href="mailto:abhiprofessional2005@gmail.com" style="color:#fff;text-decoration:none;">
+                            abhiprofessional2005@gmail.com
+                        </a>
+                        <br>
+                        <a href="tel:+917093185747" style="color:#fff;text-decoration:none;">
+                            +91 7093185747
+                        </a>
+                    </p>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Chambrolu Venkata Abhishek. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to top button -->
+    <a href="#" class="scroll-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>    
+    <script src="assets/js/main.js"></script>
+    <!-- Add this modal at the end of the body -->
+    <div id="certModal" class="cert-modal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:9999;">
+        <span onclick="closeCertModal()" style="position:absolute; top:30px; right:50px; color:#fff; font-size:2rem; cursor:pointer;">&times;</span>
+        <img id="certModalImg" src="" alt="Certificate" style="max-width:90vw; max-height:80vh; border-radius:10px; box-shadow:0 0 20px #000;">
+    </div>
+    <script>
+    function showCertImage(src) {
+        document.getElementById('certModalImg').src = src;
+        document.getElementById('certModal').style.display = 'flex';
+    }
+    function closeCertModal() {
+        document.getElementById('certModal').style.display = 'none';
+        document.getElementById('certModalImg').src = '';
+    }
+    function showWhatsappQR() {
+        document.getElementById('whatsappQRModal').style.display = 'flex';
+    }
+    function closeWhatsappQR() {
+        document.getElementById('whatsappQRModal').style.display = 'none';
+    }
+    // Video background handling
+    document.addEventListener('DOMContentLoaded', function() {
+        const video = document.getElementById('video-bg');
+        const videoBackground = document.querySelector('.main-content');
+        
+        // Function to handle video loading
+        function handleVideoLoad() {
+            console.log('Video loaded successfully');
+            videoBackground.style.background = 'none';
+        }
+
+        // Function to handle video errors
+        function handleVideoError(e) {
+            console.error('Error loading video:', e);
+            videoBackground.style.background = 'linear-gradient(45deg, #1a1a1a, #2a2a2a)';
+        }
+
+        // Add event listeners
+        video.addEventListener('loadeddata', handleVideoLoad);
+        video.addEventListener('error', handleVideoError);
+
+        // Try to play the video
+        const playVideo = async () => {
+            try {
+                await video.play();
+                console.log('Video playback started');
+            } catch (error) {
+                console.error('Error playing video:', error);
+            }
+        };
+
+        // Check if video is ready
+        if (video.readyState >= 2) {
+            playVideo();
+        } else {
+            video.addEventListener('canplay', playVideo);
+        }
+
+        // Log video source for debugging
+        console.log('Video source:', video.currentSrc);
+        console.log('Video ready state:', video.readyState);
+    });
+    // Simple video loading check
+    window.addEventListener('load', function() {
+        const video = document.getElementById('video-bg');
+        
+        // Force video to play
+        video.play().catch(function(error) {
+            console.log("Video autoplay failed:", error);
+        });
+
+        // Log video status
+        console.log("Video element:", video);
+        console.log("Video source:", video.currentSrc);
+        console.log("Video ready state:", video.readyState);
+    });
+    </script>
+</div>
+</body>
+</html>
